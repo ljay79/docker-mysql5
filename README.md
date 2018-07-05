@@ -13,7 +13,7 @@ This repo creates a Docker image for [MySQL 5.6.x](https://mysql.com/).
 Version | Git branch | Tag name
 --------| ---------- |---------
 5.6.39  | master     | latest
-5.6.39  | master     | 5.6.39
-5.7.22  | master     | 5.7.22
+5.6.39  | 5.6.39     | 5.6.39
+5.7.22  | 5.7.22     | 5.7.22
 
 ## to be continued ...
