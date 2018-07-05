@@ -14,5 +14,6 @@ Version | Git branch | Tag name
 --------| ---------- |---------
 5.6.39  | master     | latest
 5.6.39  | master     | 5.6.39
+5.7.22  | master     | 5.7.22
 
 ## to be continued ...
