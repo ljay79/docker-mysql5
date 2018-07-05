@@ -1,6 +1,11 @@
 FROM oraclelinux:7-slim
 
+# MySQL 5.6.39
 ARG PACKAGE_URL=https://repo.mysql.com/yum/mysql-5.6-community/docker/x86_64/mysql-community-server-minimal-5.6.39-2.el7.x86_64.rpm
+
+# MySQL 5.7.22
+#ARG PACKAGE_URL=https://repo.mysql.com/yum/mysql-5.7-community/docker/x86_64/mysql-community-server-minimal-5.7.22-1.el7.x86_64.rpm
+
 ARG PACKAGE_URL_SHELL=""
 
 # Install server
