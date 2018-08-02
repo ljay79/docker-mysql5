@@ -16,6 +16,12 @@
 set -e
 
 echo "[Entrypoint] MySQL Docker Image 5.6"
+
+# prepare optional mounted my.cnf config file
+mkdir -p /etc/mysql
+cp /opt/my.cnf /etc/mysql/my.cnf 2>/dev/null || true
+chmod -f 0644 /etc/mysql/my.cnf || true
+
 # Fetch value from server config
 # We use mysqld --verbose --help instead of my_print_defaults because the
 # latter only show values present in config files, and not server defaults
