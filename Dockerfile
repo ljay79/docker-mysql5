@@ -16,6 +16,9 @@ RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
 
 VOLUME /var/lib/mysql
 
+# optional mounted custom my.cnf must be ReadOnly
+RUN chmod 0644 /etc/mysql/my.cnf
+
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
 ENTRYPOINT ["/entrypoint.sh"]
