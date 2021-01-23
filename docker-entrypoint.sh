@@ -79,7 +79,7 @@ if [ "$1" = 'mysqld' ]; then
 		chown -R mysql:mysql "$DATADIR"
 
 		echo '[Entrypoint] Initializing database'
-		mysqld --initialize --user=mysql --datadir="$DATADIR"
+		mysqld --initialize-insecure --user=mysql --datadir="$DATADIR"
 		echo '[Entrypoint] Database initialized'
 
 		"$@" --skip-networking --socket="$SOCKET" &
