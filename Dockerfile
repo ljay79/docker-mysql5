@@ -5,9 +5,10 @@ FROM oraclelinux:7-slim
 # MySQL 5.7.22
 #ARG PACKAGE_URL=https://repo.mysql.com/yum/mysql-5.7-community/docker/x86_64/mysql-community-server-minimal-5.7.22-1.el7.x86_64.rpm
 # MySQL 5.7.29
-ARG PACKAGE_URL=https://repo.mysql.com/yum/mysql-5.7-community/docker/x86_64/mysql-community-server-minimal-5.7.29-1.el7.x86_64.rpm
-
-ARG PACKAGE_URL_SHELL=""
+#ARG PACKAGE_URL=https://repo.mysql.com/yum/mysql-5.7-community/docker/x86_64/mysql-community-server-minimal-5.7.29-1.el7.x86_64.rpm
+# MySQL 5.7.31
+ARG PACKAGE_URL=https://repo.mysql.com/yum/mysql-5.7-community/docker/x86_64/mysql-community-server-minimal-5.7.31-1.el7.x86_64.rpm
+ARG PACKAGE_URL_SHELL=https://repo.mysql.com/yum/mysql-tools-community/el/7/x86_64/mysql-shell-1.0.11-1.el7.x86_64.rpm
 
 # Install server
 RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
