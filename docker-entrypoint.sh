@@ -79,7 +79,7 @@ if [ "$1" = 'mysqld' ]; then
 		chown -R mysql:mysql "$DATADIR"
 
 		echo '[Entrypoint] Initializing database'
-		mysql_install_db --user=mysql --datadir="$DATADIR" --rpm --keep-my-cnf
+		mysql_install_db --user=mysql --datadir="$DATADIR" --keep-my-cnf
 		echo '[Entrypoint] Database initialized'
 
 		"$@" --skip-networking --socket="$SOCKET" &
