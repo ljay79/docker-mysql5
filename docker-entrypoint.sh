@@ -15,7 +15,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 set -e
 
-echo "[Entrypoint] MySQL Docker Image 5.6"
+echo "[Entrypoint] MySQL Docker Image 5.7.x"
 
 # prepare optional mounted my.cnf config file
 mkdir -p /etc/mysql
@@ -79,7 +79,7 @@ if [ "$1" = 'mysqld' ]; then
 		chown -R mysql:mysql "$DATADIR"
 
 		echo '[Entrypoint] Initializing database'
-		mysql_install_db --user=mysql --datadir="$DATADIR" --rpm --keep-my-cnf
+		mysql_install_db --user=mysql --datadir="$DATADIR" --keep-my-cnf
 		echo '[Entrypoint] Database initialized'
 
 		"$@" --skip-networking --socket="$SOCKET" &
@@ -208,7 +208,7 @@ password=healthcheckpass
 EOF
 	touch /mysql-init-complete
 	chown -R mysql:mysql "$DATADIR"
-	echo "[Entrypoint] Starting MySQL 5.6.x"
+	echo "[Entrypoint] Starting MySQL 5.7.x"
 fi
 
 exec "$@"
