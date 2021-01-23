@@ -6,7 +6,7 @@
 
 [![Docker build](http://dockeri.co/image/ljay/mysql5)](https://hub.docker.com/r/ljay/mysql5/)
 
-This repo creates a Docker image for [MySQL 5.6.x](https://mysql.com/).
+This repo creates a Docker image for [MySQL 5.7.x](https://mysql.com/).
 
 ## MySQL versions
 
@@ -15,5 +15,6 @@ Version | Git branch | Tag name
 5.7.29  | master     | latest
 5.6.39  | 5.6.39     | 5.6.39
 5.7.22  | 5.7.22     | 5.7.22
+5.7.31  | 5.7.31     | 5.7.31
 
 ## to be continued ...
